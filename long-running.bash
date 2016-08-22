@@ -91,8 +91,9 @@ function notify_when_long_running_commands_finish_install() {
                         $notify \
                         -i $icon \
                         -u $urgency \
-                        "Command completed in $time_taken_human" \
-                        "$__udm_last_command"
+                        "Long command completed" \
+                        "\"$__udm_last_command\" took $time_taken_human"
+                        mpv /usr/share/sounds/freedesktop/stereo/complete.oga --really-quiet
                     else
                         echo -ne "\a"
                     fi
